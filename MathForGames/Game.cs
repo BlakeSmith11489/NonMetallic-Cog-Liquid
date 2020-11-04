@@ -10,7 +10,7 @@ namespace MathForGames
 {
     class Game
     {
-        private static bool _gameOver = false;
+        private static bool gameOver = false;
         private static Scene[] _scenes;
         private static int _currentSceneIndex;
         public static int CurrentSceneIndex
@@ -29,7 +29,7 @@ namespace MathForGames
         /// <param name="value">If this value is true, the game will end</param>
         public static void SetGameOver(bool value)
         {
-            _gameOver = value;
+            gameOver = value;
         }
 
 
@@ -264,7 +264,7 @@ namespace MathForGames
 
 
             //Loops the game until either the game is set to be over or the window closes
-            while(!_gameOver || !Raylib.WindowShouldClose())
+            while(!gameOver || !Raylib.WindowShouldClose())
             {
                 //Stores the current time between frames
                 float deltaTime = Raylib.GetFrameTime();
